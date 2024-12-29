@@ -3,25 +3,23 @@
 // write your code here
 function success() {
   const message = document.createElement('div');
+
   message.textContent = 'Promise was resolved!';
   document.querySelector('body').appendChild(message);
 }
 
 function error() {
   const message = document.createElement('div');
+
   message.textContent = 'Promise was rejected!';
   document.querySelector('body').appendChild(message);
 }
 
 const promise1 = new Promise((resolve, reject) => {
-  const button = document.querySelector('h1');
+  const logo = document.querySelector('h1');
 
-  button.addEventListener('click', () => {
-    if (button) {
+  logo.addEventListener('click', () => {
       resolve('success');
-    } else {
-      reject(new Error('Promise rejected'));
-    }
   });
 });
 
